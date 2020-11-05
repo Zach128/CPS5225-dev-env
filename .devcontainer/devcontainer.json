@@ -1,5 +1,5 @@
 {
-	"name": "Python 3",
+	"name": "CPS5225 Testing Env",
 	"build": {
 		"dockerfile": "Dockerfile",
 		"context": "..",
