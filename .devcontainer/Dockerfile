@@ -1,7 +1,4 @@
-# See here for image contents: https://github.com/microsoft/vscode-dev-containers/tree/v0.145.1/containers/python-3/.devcontainer/base.Dockerfile
-
-# [Choice] Python version: 3, 3.9, 3.8, 3.7, 3.6
-ARG VARIANT="3"
+# Created with help from: https://github.com/0916dhkim/vscode-devcontainer-tutorial
 FROM python:rc-slim-buster
 
 ARG USERNAME=vscode
@@ -43,7 +40,3 @@ RUN groupadd --gid $USER_GID $USERNAME \
 # Allows us to use apt in the debian container
 ENV DEBIAN_FRONTEND=dialog
 USER $USERNAME
-
-RUN git clone https://github.com/Zach128/CPS5225-dev-env.git
-
-WORKDIR /CPS5225-dev-env
