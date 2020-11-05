@@ -31,12 +31,12 @@ RUN apt-get -y update --no-install-recommends \
     && apt-get autoremove -y \
     && apt-get clean -y
 
-RUN groupadd --gid $USER_GID $USERNAME \
-    && useradd --uid $USER_UID --gid $USER_GID -m $USERNAME
+# RUN groupadd --gid $USER_GID $USERNAME \
+#     && useradd --uid $USER_UID --gid $USER_GID -m $USERNAME
 
 # [Optional] Uncomment this line to install global node packages.
 # RUN su vscode -c "source /usr/local/share/nvm/nvm.sh && npm install -g <your-package-here>" 2>&1
 
 # Allows us to use apt in the debian container
 ENV DEBIAN_FRONTEND=dialog
-USER $USERNAME
+# USER $USERNAME
