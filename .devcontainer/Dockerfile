@@ -1,5 +1,5 @@
 # Created with help from: https://github.com/0916dhkim/vscode-devcontainer-tutorial
-FROM python:rc-slim-buster
+FROM arm64v8/python:latest
 
 ARG USERNAME=vscode
 ARG USER_UID=1000
