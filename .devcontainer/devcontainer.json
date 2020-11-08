@@ -1,13 +1,15 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.140.1/containers/python-3
 {
-	"name": "CPS5225 Testing Env",
+	"name": "Python 3",
 	"build": {
 		"dockerfile": "Dockerfile",
 		"context": "..",
 		"args": { 
-			// Update 'VARIANT' to pick a Python version: 3, 3.6, 3.7, 3.8, 3.9
-			"VARIANT": "3.9",
+			// Update 'VARIANT' to pick a Python version: 3, 3.6, 3.7, 3.8 
+			"VARIANT": "3.6",
 			// Options
-			"INSTALL_NODE": "true",
+			"INSTALL_NODE": "false",
 			"NODE_VERSION": "lts/*"
 		}
 	},
@@ -31,7 +33,8 @@
 
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [
-		"ms-python.python"
+		"ms-python.python",
+		"eamodio.gitlens"
 	]
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
