@@ -11,11 +11,11 @@ RUN if [ "${INSTALL_NODE}" = "true" ]; then su vscode -c "source /usr/local/shar
 
 # [Optional] If your pip requirements rarely change, uncomment this section to add them to the image.
 COPY requirements.txt /tmp/pip-tmp/
-RUN pip3 --disable-pip-version-check --no-cache-dir install -r /tmp/pip-tmp/requirements.txt \
+RUN pip3 --disable-pip-version-check --no-cache-dir --use-feature=2020-resolver install -r /tmp/pip-tmp/requirements.txt \
    && rm -rf /tmp/pip-tmp
 
 # Fix Jupyter bug requiring ipykernel
-RUN /usr/local/bin/python -m pip install 'traitlets==4.3.3' --force-reinstall
+RUN /usr/local/bin/python -m pip install --use-feature=2020-resolver 'traitlets==4.3.3' --force-reinstall
 
 # [Optional] Uncomment this section to install additional OS packages.
 # RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
