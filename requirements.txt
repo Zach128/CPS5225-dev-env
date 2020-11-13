@@ -5,3 +5,7 @@ ipykernel
 keras
 tensorflow
 matplotlib
+sklearn
+seaborn
+scipy
+RandomizedPCA
